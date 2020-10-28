@@ -8,7 +8,6 @@
         <b-collapse is-nav id="nav_collapse">
             <b-navbar-nav>
                 <b-nav-item to="/create-token/">Create</b-nav-item>
-                <b-nav-item to="/features/">Features</b-nav-item>
                 <b-nav-item to="/docs/">Docs</b-nav-item>
             </b-navbar-nav>
 

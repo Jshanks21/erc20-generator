@@ -3,9 +3,6 @@
         <b-row>
             <b-col lg="10" offset-lg="1" class="mt-4 p-0" v-if="!loading">
                 <b-card :title="$site.title" bg-variant="transparent" border-variant="0">
-                    <p class="card-text">
-                        {{ $site.description }}
-                    </p>
                     <b-card bg-variant="light"
                             header="Token Type"
                             header-bg-variant="dark"
@@ -71,6 +68,7 @@
                             class="mt-3">
                         <b-card v-for="(method, key) in contracts.token.abi"
                                 :key="key"
+                                v-if="method.name"
                                 no-body
                                 bg-variant="light"
                                 class="mt-4">
@@ -79,7 +77,7 @@
                                    :href="`#method-${key}`"
                                    @click.prevent
                                    class="stretched-link text-reset text-decoration-none">
-                                    {{ method.name || 'constructor' }}
+                                    {{ method.name }}
                                 </a>
                             </b-card-header>
                             <b-collapse :id="`method-${key}`" class="p-4">

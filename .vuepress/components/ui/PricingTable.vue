@@ -16,6 +16,10 @@
                         </b-list-group-item>
 
                         <b-list-group-item class="d-flex justify-content-between align-items-center">
+                            Detailed <checkmark :value="t.detailed"></checkmark>
+                        </b-list-group-item>
+
+                        <b-list-group-item class="d-flex justify-content-between align-items-center">
                             Capped Supply <checkmark :value="t.capped"></checkmark>
                         </b-list-group-item>
 
@@ -28,11 +32,11 @@
                         </b-list-group-item>
 
                         <b-list-group-item class="d-flex justify-content-between align-items-center">
-                            Token Recover <checkmark :value="t.tokenRecover"></checkmark>
+                            ERC1363 <checkmark :value="t.erc1363"></checkmark>
                         </b-list-group-item>
 
                         <b-list-group-item class="d-flex justify-content-between align-items-center">
-                            ERC1363 <checkmark :value="t.erc1363"></checkmark>
+                            Token Recover <checkmark :value="t.tokenRecover"></checkmark>
                         </b-list-group-item>
 
                         <b-list-group-item class="d-flex justify-content-between align-items-center">
@@ -66,44 +70,48 @@
           {
             name: 'SimpleERC20',
             standard: true,
+            detailed: true,
             capped: true,
             mintable: false,
             burnable: false,
-            tokenRecover: false,
             erc1363: false,
+            tokenRecover: false,
             removeCopyright: false,
             price: 0,
           },
           {
             name: 'StandardERC20',
             standard: true,
+            detailed: true,
             capped: true,
             mintable: false,
             burnable: false,
-            tokenRecover: false,
             erc1363: false,
+            tokenRecover: false,
             removeCopyright: true,
             price: 0.1,
           },
           {
             name: 'CommonERC20',
             standard: true,
+            detailed: true,
             capped: true,
             mintable: true,
             burnable: true,
-            tokenRecover: false,
             erc1363: false,
+            tokenRecover: false,
             removeCopyright: true,
             price: 0.2,
           },
           {
             name: 'PowerfulERC20',
             standard: true,
+            detailed: true,
             capped: true,
             mintable: true,
             burnable: true,
-            tokenRecover: true,
             erc1363: true,
+            tokenRecover: true,
             removeCopyright: true,
             price: 0.3,
           },
