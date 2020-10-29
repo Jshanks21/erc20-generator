@@ -1,8 +1,11 @@
 <template>
     <b-container fluid>
-        <b-row>
-            <b-col lg="10" offset-lg="1" class="mt-4 p-0" v-if="!loading">
-                <b-card :title="$site.title" bg-variant="transparent" border-variant="0">
+        <b-row id="token-docs">
+            <b-col lg="10" offset-lg="1" class="my-4 p-0">
+                <div v-if="loading" class="text-center p-5">
+                    <ui--loader :loading="true"></ui--loader>
+                </div>
+                <b-card v-if="!loading" :title="$site.title" bg-variant="transparent" border-variant="0">
                     <b-card bg-variant="light"
                             header="Token Type"
                             header-bg-variant="dark"

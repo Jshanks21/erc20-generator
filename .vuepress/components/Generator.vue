@@ -2,6 +2,9 @@
     <b-container fluid>
         <b-row id="token-generator">
             <b-col lg="10" offset-lg="1" class="mb-3 p-0">
+                <div v-if="loading" class="text-center p-5">
+                    <ui--loader :loading="true"></ui--loader>
+                </div>
                 <b-card v-if="!loading" bg-variant="transparent" border-variant="0">
                     <b-alert show variant="danger" v-if="!metamask.installed">
                         <h4 class="alert-heading">Alert</h4>
@@ -232,14 +235,17 @@
                                         </b-alert>
 
                                         <template #footer>
-                                            <small>GAS will be added to final amount</small>
+                                            <small>GAS fee will be added to final amount</small>
                                         </template>
                                     </b-card>
 
                                     <b-row class="mt-3">
                                         <b-col lg="12" class="text-right">
-                                            <b-button variant="warning" size="lg" type="submit" class="py-3 px-5">
-                                                Create Token
+                                            <b-button variant="success"
+                                                      size="lg"
+                                                      type="submit"
+                                                      class="py-3 px-5 text-uppercase">
+                                                Confirm
                                             </b-button>
                                         </b-col>
                                     </b-row>

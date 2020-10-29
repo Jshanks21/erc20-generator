@@ -52,9 +52,13 @@
                 </b-card>
             </b-col>
         </b-row>
-        <p class="text-center text-light">
-            <small>GAS will be added to final amount</small>
-        </p>
+        <b-row>
+            <b-col lg="6" offset-lg="3">
+                <p class="text-center text-light">
+                    * GAS fee will be added to final amount
+                </p>
+            </b-col>
+        </b-row>
     </div>
 </template>
 

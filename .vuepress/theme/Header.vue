@@ -3,15 +3,17 @@
 
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-        <b-navbar-brand to="/">ERC20 Token Generator</b-navbar-brand>
+        <b-navbar-brand to="/">
+            <b-icon-house></b-icon-house>
+        </b-navbar-brand>
 
         <b-collapse is-nav id="nav_collapse">
             <b-navbar-nav>
-                <b-nav-item to="/create-token/">Create</b-nav-item>
-                <b-nav-item to="/docs/">Docs</b-nav-item>
+                <b-nav-item to="/create-token/">Create your Token</b-nav-item>
             </b-navbar-nav>
 
             <b-navbar-nav class="ml-auto">
+                <b-nav-item to="/docs/">Docs</b-nav-item>
                 <b-nav-item target="_blank"
                             href="https://medium.com/@vittominacori/create-an-erc20-token-in-less-than-a-minute-2a8751c4d6f4">
                     About
